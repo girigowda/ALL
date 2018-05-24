@@ -1,0 +1,403 @@
+09-May-2018 10:49:40.308 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+09-May-2018 10:49:40.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+09-May-2018 10:49:40.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+09-May-2018 10:49:40.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+09-May-2018 10:49:40.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.4.0-121-generic
+09-May-2018 10:49:40.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-May-2018 10:49:40.312 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+09-May-2018 10:49:40.312 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-8u162-b12-0ubuntu0.16.04.2-b12
+09-May-2018 10:49:40.312 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-May-2018 10:49:40.312 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/krunal/Documents/tomcat
+09-May-2018 10:49:40.312 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/krunal/Documents/tomcat
+09-May-2018 10:49:40.312 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/krunal/Documents/tomcat/conf/logging.properties
+09-May-2018 10:49:40.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-May-2018 10:49:40.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-May-2018 10:49:40.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-May-2018 10:49:40.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+09-May-2018 10:49:40.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+09-May-2018 10:49:40.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/krunal/Documents/tomcat
+09-May-2018 10:49:40.313 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/krunal/Documents/tomcat
+09-May-2018 10:49:40.314 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/krunal/Documents/tomcat/temp
+09-May-2018 10:49:40.314 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+09-May-2018 10:49:40.398 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8088"]
+09-May-2018 10:49:40.411 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2018 10:49:40.423 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 10:49:40.425 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[AJP/1.3-8009]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8009]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:112)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:875)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:632)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:655)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:309)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:492)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:995)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	... 12 more
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1086)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:268)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:581)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:993)
+	... 13 more
+
+09-May-2018 10:49:40.427 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 529 ms
+09-May-2018 10:49:40.449 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-May-2018 10:49:40.449 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+09-May-2018 10:49:40.459 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/manager]
+09-May-2018 10:49:40.838 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/manager] has finished in [378] ms
+09-May-2018 10:49:40.838 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/host-manager]
+09-May-2018 10:49:40.859 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/host-manager] has finished in [21] ms
+09-May-2018 10:49:40.860 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/ROOT]
+09-May-2018 10:49:40.878 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/ROOT] has finished in [17] ms
+09-May-2018 10:49:40.878 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/examples]
+09-May-2018 10:49:41.145 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/examples] has finished in [267] ms
+09-May-2018 10:49:41.145 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/docs]
+09-May-2018 10:49:41.157 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/docs] has finished in [12] ms
+09-May-2018 10:49:41.160 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8088"]
+09-May-2018 10:49:41.165 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 738 ms
+09-May-2018 10:49:41.166 SEVERE [main] org.apache.catalina.core.StandardServer.await StandardServer.await: create[localhost:8005]: 
+ java.net.BindException: Address already in use (Bind failed)
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:440)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:769)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:715)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:353)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:493)
+
+09-May-2018 10:49:41.167 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8088"]
+09-May-2018 10:49:41.220 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 10:49:41.220 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+09-May-2018 10:49:41.250 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8088"]
+09-May-2018 10:49:41.252 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8088"]
+09-May-2018 10:49:41.253 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 10:49:41.253 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:02:46.227 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+09-May-2018 11:02:46.228 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+09-May-2018 11:02:46.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+09-May-2018 11:02:46.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+09-May-2018 11:02:46.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.4.0-121-generic
+09-May-2018 11:02:46.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-May-2018 11:02:46.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+09-May-2018 11:02:46.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-8u162-b12-0ubuntu0.16.04.2-b12
+09-May-2018 11:02:46.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-May-2018 11:02:46.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/krunal/Documents/tomcat
+09-May-2018 11:02:46.229 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/krunal/Documents/tomcat
+09-May-2018 11:02:46.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/krunal/Documents/tomcat/conf/logging.properties
+09-May-2018 11:02:46.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-May-2018 11:02:46.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-May-2018 11:02:46.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-May-2018 11:02:46.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+09-May-2018 11:02:46.230 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+09-May-2018 11:02:46.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/krunal/Documents/tomcat
+09-May-2018 11:02:46.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/krunal/Documents/tomcat
+09-May-2018 11:02:46.231 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/krunal/Documents/tomcat/temp
+09-May-2018 11:02:46.231 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+09-May-2018 11:02:46.316 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8088"]
+09-May-2018 11:02:46.326 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2018 11:02:46.338 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:02:46.340 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2018 11:02:46.341 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 512 ms
+09-May-2018 11:02:46.368 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-May-2018 11:02:46.368 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+09-May-2018 11:02:46.400 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/manager]
+09-May-2018 11:02:46.742 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/manager] has finished in [342] ms
+09-May-2018 11:02:46.742 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/host-manager]
+09-May-2018 11:02:46.761 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/host-manager] has finished in [19] ms
+09-May-2018 11:02:46.761 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/ROOT]
+09-May-2018 11:02:46.779 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/ROOT] has finished in [17] ms
+09-May-2018 11:02:46.779 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/examples]
+09-May-2018 11:02:47.046 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/examples] has finished in [266] ms
+09-May-2018 11:02:47.046 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/docs]
+09-May-2018 11:02:47.060 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/docs] has finished in [13] ms
+09-May-2018 11:02:47.062 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8088"]
+09-May-2018 11:02:47.068 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:02:47.070 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 729 ms
+09-May-2018 11:03:29.171 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+09-May-2018 11:03:29.171 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8088"]
+09-May-2018 11:03:29.225 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:03:29.276 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+09-May-2018 11:03:29.310 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8088"]
+09-May-2018 11:03:29.311 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:03:29.312 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8088"]
+09-May-2018 11:03:29.312 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:05:06.307 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+09-May-2018 11:05:06.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+09-May-2018 11:05:06.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+09-May-2018 11:05:06.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+09-May-2018 11:05:06.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.4.0-121-generic
+09-May-2018 11:05:06.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-May-2018 11:05:06.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+09-May-2018 11:05:06.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-8u162-b12-0ubuntu0.16.04.2-b12
+09-May-2018 11:05:06.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-May-2018 11:05:06.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/krunal/Documents/tomcat
+09-May-2018 11:05:06.310 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/krunal/Documents/tomcat
+09-May-2018 11:05:06.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/krunal/Documents/tomcat/conf/logging.properties
+09-May-2018 11:05:06.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-May-2018 11:05:06.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-May-2018 11:05:06.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-May-2018 11:05:06.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+09-May-2018 11:05:06.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+09-May-2018 11:05:06.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/krunal/Documents/tomcat
+09-May-2018 11:05:06.311 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/krunal/Documents/tomcat
+09-May-2018 11:05:06.312 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/krunal/Documents/tomcat/temp
+09-May-2018 11:05:06.312 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+09-May-2018 11:05:06.391 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8090"]
+09-May-2018 11:05:06.401 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2018 11:05:06.410 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:05:06.412 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2018 11:05:06.412 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 489 ms
+09-May-2018 11:05:06.437 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-May-2018 11:05:06.437 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+09-May-2018 11:05:06.463 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/manager]
+09-May-2018 11:05:06.786 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/manager] has finished in [322] ms
+09-May-2018 11:05:06.786 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/host-manager]
+09-May-2018 11:05:06.808 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/host-manager] has finished in [22] ms
+09-May-2018 11:05:06.809 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/ROOT]
+09-May-2018 11:05:06.827 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/ROOT] has finished in [18] ms
+09-May-2018 11:05:06.828 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/examples]
+09-May-2018 11:05:07.110 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/examples] has finished in [282] ms
+09-May-2018 11:05:07.111 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/docs]
+09-May-2018 11:05:07.127 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/docs] has finished in [16] ms
+09-May-2018 11:05:07.130 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8090"]
+09-May-2018 11:05:07.139 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:05:07.140 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 727 ms
+09-May-2018 11:07:22.680 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+09-May-2018 11:07:22.681 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8090"]
+09-May-2018 11:07:22.734 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:07:22.785 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+09-May-2018 11:07:22.818 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8090"]
+09-May-2018 11:07:22.819 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:07:22.820 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8090"]
+09-May-2018 11:07:22.821 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:07:26.043 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+09-May-2018 11:07:26.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+09-May-2018 11:07:26.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+09-May-2018 11:07:26.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+09-May-2018 11:07:26.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.4.0-121-generic
+09-May-2018 11:07:26.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-May-2018 11:07:26.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+09-May-2018 11:07:26.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-8u162-b12-0ubuntu0.16.04.2-b12
+09-May-2018 11:07:26.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-May-2018 11:07:26.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/krunal/Documents/tomcat
+09-May-2018 11:07:26.046 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/krunal/Documents/tomcat
+09-May-2018 11:07:26.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/krunal/Documents/tomcat/conf/logging.properties
+09-May-2018 11:07:26.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-May-2018 11:07:26.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-May-2018 11:07:26.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-May-2018 11:07:26.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+09-May-2018 11:07:26.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+09-May-2018 11:07:26.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/krunal/Documents/tomcat
+09-May-2018 11:07:26.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/krunal/Documents/tomcat
+09-May-2018 11:07:26.047 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/krunal/Documents/tomcat/temp
+09-May-2018 11:07:26.047 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+09-May-2018 11:07:26.133 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8090"]
+09-May-2018 11:07:26.144 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2018 11:07:26.153 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:07:26.154 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2018 11:07:26.155 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 523 ms
+09-May-2018 11:07:26.182 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-May-2018 11:07:26.182 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+09-May-2018 11:07:26.212 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/manager]
+09-May-2018 11:07:26.548 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/manager] has finished in [336] ms
+09-May-2018 11:07:26.549 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/host-manager]
+09-May-2018 11:07:26.571 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/host-manager] has finished in [22] ms
+09-May-2018 11:07:26.571 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/ROOT]
+09-May-2018 11:07:26.590 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/ROOT] has finished in [19] ms
+09-May-2018 11:07:26.590 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/examples]
+09-May-2018 11:07:26.847 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/examples] has finished in [257] ms
+09-May-2018 11:07:26.847 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/docs]
+09-May-2018 11:07:26.862 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/docs] has finished in [15] ms
+09-May-2018 11:07:26.866 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8090"]
+09-May-2018 11:07:26.875 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:07:26.878 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 722 ms
+09-May-2018 11:07:52.061 INFO [http-nio-8090-exec-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+09-May-2018 11:07:52.090 INFO [http-nio-8090-exec-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [29] ms
+09-May-2018 11:08:02.348 INFO [http-nio-8090-exec-4] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+09-May-2018 11:08:02.360 INFO [http-nio-8090-exec-9] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+09-May-2018 11:08:02.395 INFO [http-nio-8090-exec-9] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [35] ms
+09-May-2018 11:52:39.483 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+09-May-2018 11:52:39.484 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8090"]
+09-May-2018 11:52:39.537 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:52:39.588 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+09-May-2018 11:52:39.625 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8090"]
+09-May-2018 11:52:39.630 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 11:52:39.632 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8090"]
+09-May-2018 11:52:39.633 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 12:00:25.606 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+09-May-2018 12:00:25.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+09-May-2018 12:00:25.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+09-May-2018 12:00:25.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+09-May-2018 12:00:25.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.4.0-121-generic
+09-May-2018 12:00:25.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-May-2018 12:00:25.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+09-May-2018 12:00:25.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-8u162-b12-0ubuntu0.16.04.2-b12
+09-May-2018 12:00:25.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-May-2018 12:00:25.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/krunal/Documents/tomcat
+09-May-2018 12:00:25.608 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/krunal/Documents/tomcat
+09-May-2018 12:00:25.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/krunal/Documents/tomcat/conf/logging.properties
+09-May-2018 12:00:25.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-May-2018 12:00:25.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-May-2018 12:00:25.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-May-2018 12:00:25.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+09-May-2018 12:00:25.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+09-May-2018 12:00:25.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/krunal/Documents/tomcat
+09-May-2018 12:00:25.609 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/krunal/Documents/tomcat
+09-May-2018 12:00:25.610 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/krunal/Documents/tomcat/temp
+09-May-2018 12:00:25.610 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+09-May-2018 12:00:25.702 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8090"]
+09-May-2018 12:00:25.712 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2018 12:00:25.724 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 12:00:25.726 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[AJP/1.3-8009]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[AJP/1.3-8009]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:112)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:875)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:632)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:655)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:309)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:492)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:995)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:107)
+	... 12 more
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1086)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:268)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:581)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:993)
+	... 13 more
+
+09-May-2018 12:00:25.727 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 530 ms
+09-May-2018 12:00:25.757 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-May-2018 12:00:25.758 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+09-May-2018 12:00:25.789 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+09-May-2018 12:00:26.128 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [338] ms
+09-May-2018 12:00:26.129 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/manager]
+09-May-2018 12:00:26.167 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/manager] has finished in [38] ms
+09-May-2018 12:00:26.167 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/host-manager]
+09-May-2018 12:00:26.187 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/host-manager] has finished in [20] ms
+09-May-2018 12:00:26.187 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/ROOT]
+09-May-2018 12:00:26.204 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/ROOT] has finished in [17] ms
+09-May-2018 12:00:26.204 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/examples]
+09-May-2018 12:00:26.470 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/examples] has finished in [266] ms
+09-May-2018 12:00:26.471 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/docs]
+09-May-2018 12:00:26.486 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/docs] has finished in [16] ms
+09-May-2018 12:00:26.490 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8090"]
+09-May-2018 12:00:26.497 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 769 ms
+09-May-2018 12:00:26.498 SEVERE [main] org.apache.catalina.core.StandardServer.await StandardServer.await: create[localhost:8005]: 
+ java.net.BindException: Address already in use (Bind failed)
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.AbstractPlainSocketImpl.bind(AbstractPlainSocketImpl.java:387)
+	at java.net.ServerSocket.bind(ServerSocket.java:375)
+	at java.net.ServerSocket.<init>(ServerSocket.java:237)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:440)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:769)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:715)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:353)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:493)
+
+09-May-2018 12:00:26.498 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8090"]
+09-May-2018 12:00:26.552 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 12:00:26.552 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+09-May-2018 12:00:26.585 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8090"]
+09-May-2018 12:00:26.587 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8090"]
+09-May-2018 12:00:26.587 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 12:00:26.588 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 12:05:45.389 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.31
+09-May-2018 12:05:45.391 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 27 2018 20:24:25 UTC
+09-May-2018 12:05:45.391 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.31.0
+09-May-2018 12:05:45.391 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+09-May-2018 12:05:45.391 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.4.0-121-generic
+09-May-2018 12:05:45.391 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+09-May-2018 12:05:45.392 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-amd64/jre
+09-May-2018 12:05:45.392 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_162-8u162-b12-0ubuntu0.16.04.2-b12
+09-May-2018 12:05:45.392 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+09-May-2018 12:05:45.392 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/krunal/Documents/tomcat
+09-May-2018 12:05:45.392 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/krunal/Documents/tomcat
+09-May-2018 12:05:45.392 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/krunal/Documents/tomcat/conf/logging.properties
+09-May-2018 12:05:45.392 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+09-May-2018 12:05:45.392 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+09-May-2018 12:05:45.392 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+09-May-2018 12:05:45.392 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+09-May-2018 12:05:45.393 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+09-May-2018 12:05:45.393 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/krunal/Documents/tomcat
+09-May-2018 12:05:45.394 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/krunal/Documents/tomcat
+09-May-2018 12:05:45.394 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/krunal/Documents/tomcat/temp
+09-May-2018 12:05:45.394 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+09-May-2018 12:05:45.477 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8090"]
+09-May-2018 12:05:45.491 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2018 12:05:45.502 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 12:05:45.504 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+09-May-2018 12:05:45.505 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 530 ms
+09-May-2018 12:05:45.534 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+09-May-2018 12:05:45.534 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.31
+09-May-2018 12:05:45.573 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+09-May-2018 12:05:45.898 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [324] ms
+09-May-2018 12:05:45.899 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/manager]
+09-May-2018 12:05:45.932 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/manager] has finished in [32] ms
+09-May-2018 12:05:45.932 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/host-manager]
+09-May-2018 12:05:45.952 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/host-manager] has finished in [19] ms
+09-May-2018 12:05:45.952 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/ROOT]
+09-May-2018 12:05:45.969 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/ROOT] has finished in [17] ms
+09-May-2018 12:05:45.969 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/examples]
+09-May-2018 12:05:46.229 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/examples] has finished in [260] ms
+09-May-2018 12:05:46.230 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/krunal/Documents/tomcat/webapps/docs]
+09-May-2018 12:05:46.245 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/krunal/Documents/tomcat/webapps/docs] has finished in [15] ms
+09-May-2018 12:05:46.248 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8090"]
+09-May-2018 12:05:46.255 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+09-May-2018 12:05:46.256 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 750 ms
+10-May-2018 09:50:08.737 INFO [http-nio-8090-exec-9] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+10-May-2018 09:50:08.753 INFO [http-nio-8090-exec-10] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+10-May-2018 09:50:08.779 INFO [http-nio-8090-exec-10] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [26] ms
+10-May-2018 09:50:18.735 INFO [http-nio-8090-exec-6] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+10-May-2018 09:50:18.749 INFO [http-nio-8090-exec-6] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+10-May-2018 09:50:18.779 INFO [http-nio-8090-exec-6] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [31] ms
+10-May-2018 14:22:34.481 INFO [http-nio-8090-exec-15] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+10-May-2018 14:22:34.493 INFO [http-nio-8090-exec-22] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+10-May-2018 14:22:34.544 INFO [http-nio-8090-exec-22] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [50] ms
+10-May-2018 14:22:59.396 INFO [http-nio-8090-exec-17] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+10-May-2018 14:22:59.409 INFO [http-nio-8090-exec-17] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+10-May-2018 14:22:59.450 INFO [http-nio-8090-exec-17] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [41] ms
+10-May-2018 14:23:09.485 INFO [http-nio-8090-exec-18] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+10-May-2018 14:23:09.493 INFO [http-nio-8090-exec-18] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+10-May-2018 14:23:09.514 INFO [http-nio-8090-exec-18] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [21] ms
+10-May-2018 14:23:24.415 INFO [http-nio-8090-exec-26] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+10-May-2018 14:23:24.426 INFO [http-nio-8090-exec-26] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+10-May-2018 14:23:24.464 INFO [http-nio-8090-exec-26] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [38] ms

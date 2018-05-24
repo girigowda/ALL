@@ -1,0 +1,23 @@
+---
+
+ - name: Create a new Demo EC2 instance
+   hosts: localhost
+   gather_facts: False
+
+   vars:
+      region: ap-south-1
+      instance_type: t2.nano
+
+tasks:
+
+ - name: Create an ec2 instance
+   ec2:
+     key_name: ubuntu
+     instance_type: t2.micro
+     image: ami-7c87d913
+     wait: yes
+     group: lasttry 
+     count: 1      
+     vpc_subnet_id: subnet-ca7deca2
+     assign_public_ip: yes
+

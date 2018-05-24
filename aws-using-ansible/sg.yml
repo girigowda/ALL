@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+   region: ap-south-1
+  tasks:
+   - name: add ssecurity group
+     ec2_group: 
+         region:  "{{ region }}"
+         name: ansible-security-group-1
+         description: group
+         state: present
+         rules: 
+           - proto: tcp
+             from_port: 22
+             to_port: 22
+             cird_ip: 0.0.0.0/0
+           - proto: tcp
+             from_port: 80
+             to_port: 80
+             cird_ip: 0.0.0.0/0
+         rules_engress:
+            - proto: all
+              cidr_ip: 0.0.0.0/0

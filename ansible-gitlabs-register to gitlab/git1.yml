@@ -1,0 +1,35 @@
+---
+- hosts: localhost
+  gather_facts: no
+  become: yes
+  vars_files:
+     - git11.yml
+  tasks:
+
+      - name: install gitlab runner
+        shell: sudo wget -O /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64
+        shell: sudo chmod +x /usr/local/bin/gitlab-runner
+        shell: sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
+        shell: sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
+
+      - name: start gitlab runner
+        shell: sudo gitlab-runner start
+        
+      
+      - name: List configured runners
+        command: gitlab-runner list
+        register: configured_runners
+        changed_when: False
+
+      - name: Register runner to GitLab
+        command: gitlab-runner register >
+          --non-interactive
+          --url '{{ gitlab_runner_coordinator_url }}'
+          --registration-token '{{ gitlab_runner_registration_token }}'
+          --description '{{gitlab_runner_description}}'
+          --tag-list '{{gitlab_runner_tag}}'
+          --run-untagged="true"
+          --locked="false"
+          --executor '{{gitlab_runner_executor}}'
+          --docker-image '{{gitlab_runner_dockerimage}}'
+

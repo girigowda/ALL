@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+   region: ap-south-1
+  tasks:
+    - name: add key pair
+      ec2_key:
+         region: "{{ region }}"
+         name: new-key-pair222
+         state: present	

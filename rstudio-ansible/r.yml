@@ -1,0 +1,26 @@
+---
+
+- hosts: local
+  gather_facts: no
+  remote_user: ec2-user
+  become: yes
+
+  tasks:
+   - name: Making sure R is installed
+     yum: pkg=R state=latest
+   - name: update
+     yum: pkg=R-base state=installed 
+   - name: python
+     yum: pkg=python36 state=latest
+   - name: Install nginx
+     yum: pkg=nginx state=latest
+
+
+   - name: Rstudio
+     get_url:
+        url: https://download2.rstudio.org/rstudio-server-rhel-1.1.447-x86_64.rpm
+        dest: /tmp/rstudio-server-rhel-1.1.447-x86_64.rpm
+        mode: '0755'
+
+   - name: install
+     command: rpm -ivh /tmp/rstudio-server-rhel-1.1.447-x86_64.rpm

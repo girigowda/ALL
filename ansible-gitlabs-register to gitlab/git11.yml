@@ -1,0 +1,7 @@
+---
+  gitlab_runner_coordinator_url: 'https://gitlab.com'
+  gitlab_runner_registration_token: "zRcMsSABaJJF9-YGTz-m"
+  gitlab_runner_description: "2nd gitlab"
+  gitlab_runner_tag: "qa,dev"
+  gitlab_runner_executor: "docker"
+  gitlab_runner_dockerimage: "alpine:latest"

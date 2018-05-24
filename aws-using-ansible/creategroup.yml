@@ -1,0 +1,32 @@
+---
+- hosts: localhost
+  connection: local
+  vars:
+    region: ap-south-1
+
+  tasks:
+
+   - name: setting up security group
+     ec2_group:
+         name: AWS_SECURITY_ANIBLE_yu
+         description: hello
+         region: ap-south-1
+         rules:
+          - proto: tcp
+            from_port: 80
+            to_port: 80
+            cidr_ip: 0.0.0.0/0
+          - proto: tcp
+            from_port: 22
+            to_port: 22
+            cird_ip: 0.0.0.0/0 
+
+   - name: jkdfkdoifejoerij
+      Local_action: ec2
+                    region: "{{ region }}"
+                    key_name: ubuntu
+                    instance_type: t2.micro
+                    image: ami-7c87d913
+                    wait: yes
+                    group: AWS_SECURITY_ANIBLE_yu
+

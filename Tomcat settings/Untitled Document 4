@@ -1,0 +1,98 @@
+---
+- hosts: localhost
+  gather_facts: no
+  become: yes
+  vars:
+    gitlab_runner_coordinator_url: 'https://gitlab.com'
+    gitlab_runner_registration_token: "zRcMsSABaJJF9-YGTz-m"
+    gitlab_runner_description: "my gitlab"
+    gitlab_runner_tag: "my-tag, another-tag"
+    gitlab_runner_executor: "docker"
+    gitlab_runner_dockerimage: "alpine:latest"
+
+  tasks:
+      - name: List configured runners
+        command: gitlab-runner list
+        register: configured_runners
+        changed_when: False
+
+      - name: Register runner to GitLab
+        command: gitlab-runner register >
+          --non-interactive
+          --url '{{ gitlab_runner_coordinator_url }}'
+          --registration-token '{{ gitlab_runner_registration_token }}'
+          --description '{{gitlab_runner_description}}'
+          --tag-list '{{gitlab_runner_tag}}'
+          --run-untagged="true"
+          --locked="false"
+          --executor '{{gitlab_runner_executor}}'
+          --docker-image '{{gitlab_runner_dockerimage}}'
+
+
+
+---
+- hosts: localhost
+  gather_facts: no
+  become: yes
+  vars_files:
+     - git11.yml
+
+  tasks:
+
+      - name: List configured runners
+        command: gitlab-runner list
+        register: configured_runners
+        changed_when: False
+
+      - name: Register runner to GitLab
+        command: gitlab-runner register >
+          --non-interactive
+          --url '{{ gitlab_runner_coordinator_url }}'
+          --registration-token '{{ gitlab_runner_registration_token }}'
+          --description '{{gitlab_runner_description}}'
+          --tag-list '{{gitlab_runner_tag}}'
+          --run-untagged="true"
+          --locked="false"
+          --executor '{{gitlab_runner_executor}}'
+          --docker-image '{{gitlab_runner_dockerimage}}'
+
+
+
+
+
+ansible-playbook git.yml -u root --private-key=ubuntu.pem
+
+
+
+
+
+
+hbcfbUF4ZtK8T23ifN7N
+
+---
+- name: List configured runners
+  command: gitlab-runner list
+  register: configured_runners
+  changed_when: False
+
+- name: Register runner to GitLab
+  command: gitlab-runner register >
+    --non-interactive
+    --url '{{ gitlab_runner_coordinator_url }}'
+    --registration-token '{{ gitlab_runner_registration_token }}'
+    --description '{{ gitlab_runner_description }}'
+    --tag-list '{{ gitlab_runner_tags | join(",") }}'
+    --executor '{{ gitlab_runner_executor }}'
+    --docker-image '{{ gitlab_runner_docker_image }}'
+  when: configured_runners.stderr.find('\n{{ gitlab_runner_description }}') == -1
+
+
+
+
+Registering runner... forbidden (check registration token)  runner=hbcfbUF4
+
+
+    gitlab_runner_coordinator_url: 'https://gitlab.example.com/ci'
+    gitlab_runner_tags: [ 'docker' ]
+    gitlab_runner_coordinator_cert_path: "./certs/gitlab.example.com.crt"
+    gitlab_runner_registration_token: "1SsdzwmhcfHComLyn3oa"

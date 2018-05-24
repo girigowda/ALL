@@ -1,0 +1,28 @@
+---
+- name: create a new demo EC2 instances
+  hosts: localhost
+  gather_facts: no
+
+  vars:
+    region: ap-south-1
+    instance_type: t2.micro
+    ami: ami-7c87d913
+    keypair: ubuntu
+
+  tasks:
+   - name: create ec2 instance
+     ec2:
+        key_name:  "{{ keypair }}"
+        group:  mys
+        instance_type: "{{ instance_type }}"
+        image: "{{ ami }}"
+        wait: yes
+        region: "{{ region }}"
+        count: 1
+        count_tag:
+          name: ansible demo
+          instance_tags:
+            Name: Demo123
+     #    vpc_subnet_id: subnet-247bbf68
+     #    assign_public_ip: yes
+     # register: ec2 

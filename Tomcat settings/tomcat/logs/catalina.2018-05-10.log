@@ -1,0 +1,18 @@
+10-May-2018 09:50:08.737 INFO [http-nio-8090-exec-9] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+10-May-2018 09:50:08.753 INFO [http-nio-8090-exec-10] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+10-May-2018 09:50:08.779 INFO [http-nio-8090-exec-10] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [26] ms
+10-May-2018 09:50:18.735 INFO [http-nio-8090-exec-6] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+10-May-2018 09:50:18.749 INFO [http-nio-8090-exec-6] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+10-May-2018 09:50:18.779 INFO [http-nio-8090-exec-6] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [31] ms
+10-May-2018 14:22:34.481 INFO [http-nio-8090-exec-15] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+10-May-2018 14:22:34.493 INFO [http-nio-8090-exec-22] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+10-May-2018 14:22:34.544 INFO [http-nio-8090-exec-22] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [50] ms
+10-May-2018 14:22:59.396 INFO [http-nio-8090-exec-17] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+10-May-2018 14:22:59.409 INFO [http-nio-8090-exec-17] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+10-May-2018 14:22:59.450 INFO [http-nio-8090-exec-17] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [41] ms
+10-May-2018 14:23:09.485 INFO [http-nio-8090-exec-18] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+10-May-2018 14:23:09.493 INFO [http-nio-8090-exec-18] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+10-May-2018 14:23:09.514 INFO [http-nio-8090-exec-18] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [21] ms
+10-May-2018 14:23:24.415 INFO [http-nio-8090-exec-26] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/webapp]
+10-May-2018 14:23:24.426 INFO [http-nio-8090-exec-26] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war]
+10-May-2018 14:23:24.464 INFO [http-nio-8090-exec-26] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/krunal/Documents/tomcat/webapps/webapp.war] has finished in [38] ms

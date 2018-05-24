@@ -1,0 +1,34 @@
+---
+
+- hosts: local
+  gather_facts: no
+  remote_user: ec2-user
+  become: yes
+  tasks:
+
+#  - name: install python
+#    yum: pkg=nginx state=latest
+#    notify:
+#     - Start Nginx
+
+#  - name: instal
+#    yum: pkg=python state=present
+
+   # Install Python 3.3
+   - name: Download Python 3.3
+     get_url: dest=/var/local/ansible-cache url=http://www.python.org/ftp/python/3.3.5/Python-3.3.5.tar.xz 
+     sudo: yes
+
+   - name: Ensure Python 3.3 is extracted
+     shell: chdir=/var/local/ansible-cache tar xJf ./Python-3.3.5.tar.xz -C /opt creates=/opt/Python-3.3.5
+     sudo: yes
+
+   - name: Ensure Python 3.3 is configured
+     shell: chdir=/opt/Python-3.3.5 ./configure --prefix=/opt/python3.3
+
+   - name: Ensure Python 3.3 make'd
+     shell: chdir=/opt/Python-3.3.5 make
+
+   - name: Ensure Python 3.3 installed
+     shell: chdir=/opt/Python-3.3.5 make install  # Need to add a 'creates=' flag here
+     sudo: yes  

@@ -1,0 +1,53 @@
+---
+
+- hosts: localhost
+  connection: local
+  
+  tasks:
+   
+   - name: setting up security group
+     ec2_group:
+         name: AWS_SECURITY_ANIBLE_1
+         description: hello
+         region: ap-south-1
+         rules:
+          - proto: tcp
+            from_port: 80
+            to_port: 80
+            cidr_ip: 0.0.0.0/0
+          - proto: tcp
+            from_port: 22
+            to_port: 22
+            cird_ip: 0.0.0.0/0
+  
+   - name: EC2 basicio
+      ec2:
+        region: ap-south-1
+        key_name: ubuntu
+        instance_type: t2.micro
+        image: ami-7c87d913
+        wait: yes
+        group: AWS_SECURITY_ANIBLE_1
+
+
+
+#   - name: provision a EC2 instance
+      # ec2:
+         # key_name: ubuntu
+         # region: ap-south-1
+         # instance_type: t2.micro
+         # image: ami-7c87d913
+         # wait_timeout: 500
+         # count: 1
+         # instance_tag:
+            # Name: meeeee
+         # monitoring: no
+         # vpc_subnet_id: subnet-2d9e0945
+         # assign_public_ip: yes
+         # group: AWS_SECURITY_ANIBLE
+     # register: ec2_out
+
+   - name: wait for ssh to come up
+     wait_for: host={{ ite.public_dns_name }} port=22 delay=60 timeout=320 state=started
+     with_items: " {{ec2_out_instance}} "
+

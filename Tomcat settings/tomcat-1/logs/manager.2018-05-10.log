@@ -1,0 +1,25 @@
+10-May-2018 09:50:33.239 INFO [http-nio-9090-exec-15] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+10-May-2018 09:50:33.242 INFO [http-nio-9090-exec-15] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+10-May-2018 09:50:33.247 INFO [http-nio-9090-exec-16] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/webapp'
+10-May-2018 09:50:33.770 INFO [http-nio-9090-exec-17] org.apache.catalina.core.ApplicationContext.log Manager: deploy: Deploying web application '/webapp'
+10-May-2018 09:50:33.770 INFO [http-nio-9090-exec-17] org.apache.catalina.core.ApplicationContext.log Manager: Uploading WAR file to /home/krunal/Documents/tomcat-1/webapps/webapp.war
+10-May-2018 10:01:28.130 INFO [http-nio-9090-exec-21] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+10-May-2018 10:01:28.133 INFO [http-nio-9090-exec-22] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+10-May-2018 10:01:28.136 INFO [http-nio-9090-exec-22] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/webapp'
+10-May-2018 10:01:28.651 INFO [http-nio-9090-exec-23] org.apache.catalina.core.ApplicationContext.log Manager: deploy: Deploying web application '/webapp'
+10-May-2018 10:01:28.651 INFO [http-nio-9090-exec-23] org.apache.catalina.core.ApplicationContext.log Manager: Uploading WAR file to /home/krunal/Documents/tomcat-1/webapps/webapp.war
+10-May-2018 10:21:33.671 INFO [http-nio-9090-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+10-May-2018 10:21:33.674 INFO [http-nio-9090-exec-32] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+10-May-2018 10:21:33.676 INFO [http-nio-9090-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/webapp'
+10-May-2018 10:21:34.193 INFO [http-nio-9090-exec-38] org.apache.catalina.core.ApplicationContext.log Manager: deploy: Deploying web application '/webapp'
+10-May-2018 10:21:34.194 INFO [http-nio-9090-exec-38] org.apache.catalina.core.ApplicationContext.log Manager: Uploading WAR file to /home/krunal/Documents/tomcat-1/webapps/webapp.war
+10-May-2018 10:22:08.221 INFO [http-nio-9090-exec-37] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+10-May-2018 10:22:08.223 INFO [http-nio-9090-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+10-May-2018 10:22:08.225 INFO [http-nio-9090-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/webapp'
+10-May-2018 10:22:08.745 INFO [http-nio-9090-exec-39] org.apache.catalina.core.ApplicationContext.log Manager: deploy: Deploying web application '/webapp'
+10-May-2018 10:22:08.746 INFO [http-nio-9090-exec-39] org.apache.catalina.core.ApplicationContext.log Manager: Uploading WAR file to /home/krunal/Documents/tomcat-1/webapps/webapp.war
+10-May-2018 14:23:43.866 INFO [http-nio-9090-exec-44] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+10-May-2018 14:23:43.871 INFO [http-nio-9090-exec-44] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+10-May-2018 14:23:43.876 INFO [http-nio-9090-exec-45] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/webapp'
+10-May-2018 14:23:44.395 INFO [http-nio-9090-exec-52] org.apache.catalina.core.ApplicationContext.log Manager: deploy: Deploying web application '/webapp'
+10-May-2018 14:23:44.395 INFO [http-nio-9090-exec-52] org.apache.catalina.core.ApplicationContext.log Manager: Uploading WAR file to /home/krunal/Documents/tomcat-1/webapps/webapp.war

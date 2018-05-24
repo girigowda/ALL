@@ -1,0 +1,20 @@
+---
+
+- hosts: local
+  gather_facts: no
+  remote_user: ec2-user
+  become: yes
+  vars:
+     project_root: /var/www/html
+
+  tasks:
+
+
+   - name: download Anaconda
+     get_url:
+       url: https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
+       dest: /tmp/Anaconda3-5.1.0-Linux-x86_64.sh
+       mode: '0755'
+
+   - name: install Anaconda
+     command: bash /tmp/Anaconda3-5.1.0-Linux-x86_64.sh -b 
